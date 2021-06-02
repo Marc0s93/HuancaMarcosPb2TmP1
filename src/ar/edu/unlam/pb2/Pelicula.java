@@ -2,11 +2,13 @@ package ar.edu.unlam.pb2;
 
 import java.util.LinkedList;
 
-public class Pelicula extends Producto{
+public class Pelicula extends Producto implements Vendible{
 	
 	private Genero generoEsperado;
 	private Integer anioEstrenoEsperado;
 	private String directorEsperado;
+	
+	private Double precioVenta;
 	
 	private LinkedList<String> actores= new LinkedList<String>();
 	
@@ -57,6 +59,16 @@ public class Pelicula extends Producto{
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public Double getPrecioVenta() {
+		return this.precioVenta;
+	}
+
+	@Override
+	public void setPrecioVenta(Double precio) {
+		this.precioVenta=precio;
 	}
 	
 }
