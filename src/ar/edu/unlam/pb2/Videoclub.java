@@ -51,7 +51,19 @@ public class Videoclub {
 	}
 
 	public boolean alquilar(Producto nuevoProducto, Cliente nuevoCliente) {
-		// TODO Auto-generated method stub
+		if(this.productos.contains(nuevoProducto) && this.clientes.contains(nuevoCliente)) {
+			for(int i=0;i<this.clientes.size();i++) {
+				for(int j=0;j<this.productos.size();j++) {
+					if(this.productos.get(j).equals(nuevoProducto)) {
+						this.productos.get(j).agregarAlCliente(nuevoCliente);
+						this.productos.get(j).setEstadoActual(Estado.ALQUILADO);
+						this.clientes.get(i).obtenerProducto(this.productos.get(j));
+					}
+				}
+				
+				return true;
+			}
+		}
 		return false;
 	}
 	
