@@ -85,7 +85,7 @@ public class PrimerParcial2021 {
 		
 		// Validación
 		assertEquals(CODIGO_ESPERADO, comestible.getCodigo());
-		assertEquals(DESCRIPCION_ESPERADA, comestible.getCodigo());
+		assertEquals(DESCRIPCION_ESPERADA, comestible.getDescripcion());
 	}
 	
 	@Test
