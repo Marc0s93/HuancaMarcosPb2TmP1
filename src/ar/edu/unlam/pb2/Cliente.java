@@ -1,10 +1,13 @@
 package ar.edu.unlam.pb2;
 
+import java.util.LinkedList;
+
 public class Cliente {
 	private String nombre;
 	private String apellido;
 	private Integer edad;
 	private Integer codigo;
+	private LinkedList<Producto> productos= new LinkedList<Producto>();
 	
 	public Cliente(Integer codigo, String apellido, String nombre, Integer edad) {
 		this.codigo=codigo;
@@ -43,6 +46,14 @@ public class Cliente {
 
 	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
+	}
+
+	public LinkedList<Producto> getProductos() {
+		return productos;
+	}
+
+	public void obtenerProducto(Producto elProducto) {
+		this.productos.add(elProducto);
 	}
 	
 	
