@@ -68,7 +68,7 @@ public class PrimerParcial2021 {
 		
 		// Validación
 		assertEquals(CODIGO_ESPERADO, libro.getCodigo());
-		assertEquals(DESCRIPCION_ESPERADA, libro.getCodigo());
+		assertEquals(DESCRIPCION_ESPERADA, libro.getDescripcion());
 		assertEquals(AUTOR_ESPERADO, libro.getAutor());
 		assertEquals(EDITORIAL_ESPERADA, libro.getEditorial());
 		
