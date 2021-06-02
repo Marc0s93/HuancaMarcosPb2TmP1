@@ -3,6 +3,8 @@ package ar.edu.unlam.pb2;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Assert;
+import org.junit.Test;
 
 import ar.edu.unlam.pb2.Estado;
 import ar.edu.unlam.pb2.Genero;
@@ -48,7 +50,7 @@ public class PrimerParcial2021 {
 		
 		// Validación
 		assertEquals(CODIGO_ESPERADO, juego.getCodigo());
-		assertEquals(DESCRIPCION_ESPERADA, juego.getCodigo());
+		assertEquals(DESCRIPCION_ESPERADA, juego.getDescripcion());
 		assertEquals(CONSOLA_ESPERADA, juego.getTipo());
 		
 	}

@@ -1,17 +1,19 @@
 package ar.edu.unlam.pb2;
 
-public class Pelicula {
-	private Integer codigoEsperado;
-	private String descripcionEsperada;
+import java.util.LinkedList;
+
+public class Pelicula extends Producto{
+	
 	private Genero generoEsperado;
 	private Integer anioEstrenoEsperado;
 	private String directorEsperado;
 	
+	private LinkedList<String> actores= new LinkedList<String>();
+	
 
 	public Pelicula(Integer cODIGO_ESPERADO, String dESCRIPCION_ESPERADA, Genero gENERO_ESPERADO,
 			Integer aNO_DE_ESTRENO_ESPERADO, String dIRECTOR_ESPERADO) {
-		this.codigoEsperado=cODIGO_ESPERADO;
-		this.descripcionEsperada=dESCRIPCION_ESPERADA;
+		super(cODIGO_ESPERADO,dESCRIPCION_ESPERADA);
 		this.generoEsperado=gENERO_ESPERADO;
 		this.anioEstrenoEsperado=aNO_DE_ESTRENO_ESPERADO;
 		this.directorEsperado=dIRECTOR_ESPERADO;
@@ -19,24 +21,10 @@ public class Pelicula {
 
 	public void agregarActor(String aCTOR_1_ESPERADO) {
 		// TODO Auto-generated method stub
-		
+		this.actores.add(aCTOR_1_ESPERADO);
 	}
 
-	public Integer getCodigo() {
-		return codigoEsperado;
-	}
-
-	public void setCodigo(Integer codigoEsperado) {
-		this.codigoEsperado = codigoEsperado;
-	}
-
-	public String getDescripcion() {
-		return descripcionEsperada;
-	}
-
-	public void setDescripcion(String descripcionEsperada) {
-		this.descripcionEsperada = descripcionEsperada;
-	}
+	
 
 	public Genero getGenero() {
 		return generoEsperado;
@@ -62,9 +50,13 @@ public class Pelicula {
 		this.directorEsperado = directorEsperado;
 	}
 
-	public Object actua(String aCTOR_1_ESPERADO) {
-		// TODO Auto-generated method stub
-		return null;
+	public Boolean actua(String aCTOR_1_ESPERADO) {
+		for (String actor : this.actores) {
+			if(actor.equals(aCTOR_1_ESPERADO)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 }
