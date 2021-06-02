@@ -8,7 +8,7 @@ import ar.edu.unlam.pb2.Estado;
 import ar.edu.unlam.pb2.Genero;
 import ar.edu.unlam.pb2.TipoDeConsola;
 
-class PrimerParcial2021 {
+class PrimerParcial {
 
 	@Test
 	void queSePuedaCrearUnaPelicula() {
